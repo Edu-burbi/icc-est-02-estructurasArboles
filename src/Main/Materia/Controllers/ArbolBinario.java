@@ -22,6 +22,9 @@ public class ArbolBinario {
         return node;
     }
 
+    public Node getRoot() {
+        return root;
+    }
     public void printTree() {
         printTree(root, " ", true);
     }
