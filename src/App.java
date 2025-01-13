@@ -1,13 +1,15 @@
 import Main.Ejercicio_03_listevels.Listevels;
+import Main.Materia.Controllers.ArbolAVL;
 import Main.Materia.Controllers.ArbolBinario;
 import Main.Materia.Controllers.ArbolRecorrido;
-import Main.Materia.Controllers.Models.Node;  
+import Main.Materia.Controllers.Models.Node;
 import java.util.List;
 
 public class App {
     public static void main(String[] args) throws Exception {
         runArboLBinario();
         runEjercicio();
+        runArbolAVL();
     }
 
     public static void runArboLBinario() {
@@ -34,9 +36,9 @@ public class App {
         System.out.println("\nRecorrido PostOrder Recursivo: ");
         arbolRecorrido.postOrderRecursivo(arbolBinario.getRoot());
 
-     }
+    }
 
-     private static void runEjercicio() {
+    private static void runEjercicio() {
 
         ArbolBinario arbolbinario = new ArbolBinario();
         int[] valores = {4, 2, 7, 1, 3, 6, 9};
@@ -44,7 +46,7 @@ public class App {
             arbolbinario.insert(valor);
         }
 
-        System.out.println("\nÁrbol binario:");
+        System.out.println("\nÁrbol Ejercicio:");
         arbolbinario.printTree();
 
 
@@ -61,4 +63,15 @@ public class App {
             System.out.println();
         }
     }
- }
+
+    private static void runArbolAVL() {
+        System.out.println("\nArbol avl");
+        int [] values = {10,9,8,20,15,24,21,23,50,25};   
+        ArbolAVL arbolavl = new ArbolAVL();
+            for(int num : values){
+                arbolavl.insert(num);
+            }
+
+        arbolavl.printTree();
+    }
+}
