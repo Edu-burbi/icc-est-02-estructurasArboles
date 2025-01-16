@@ -25,8 +25,8 @@ The `JAVA PROJECTS` view allows you to manage your dependencies. More details ca
 
 Este proyecto implementa una serie de ejercicios relacionados con la manipulación de árboles binarios en Java. Cada ejercicio demuestra una operación diferentes que se puede realizar en un árbol binario. El código está organizado en clases que corresponden a cada uno de los ejercicios mencionados en el main y en los archivos correspondientes.
 
-1. ## Ejercicio 1: Inserción en un Árbol Binario de Búsqueda
-## Descripción: Este ejercicio muestra cómo insertar valores en un árbol binario de búsqueda (BST) y cómo imprimir el orden de inserción y la estructura del árbol.
+## 1. Ejercicio 1: Inserción en un Árbol Binario de Búsqueda
+## Descripción: Este ejercicio muestra cómo insertar valores en un árbol binario de búsqueda (BST) y cómo imprimir la lista de valores y la estructura del árbol.
 
 Funcionamiento:
 
@@ -36,7 +36,7 @@ Clases principales:
 
 InsertBSTTest: Maneja la inserción y la impresión del árbol por niveles y el orden de inserción.
 
-2. ## Ejercicio 2: Inversión de un Árbol Binario
+## 2. Ejercicio 2: Inversión de un Árbol Binario
 ## Descripción: Este ejercicio invierte un árbol binario, intercambiando los nodos de los subárboles izquierdo y derecho de cada nodo.
 
 Funcionamiento:
@@ -47,7 +47,7 @@ Clases principales:
 
 InvertBinaryTree: Maneja la inserción de los valores y la inversión del árbol de manera recursiva.
 
-3. ## Ejercicio 3: Listado de Niveles de un Árbol Binario
+## 3. Ejercicio 3: Listado de Niveles de un Árbol Binario
 ## Descripción: Este ejercicio lista todos los nodos del árbol binario, agrupados por niveles.
 
 Funcionamiento:
@@ -58,7 +58,7 @@ Clases principales:
 
 ListLevels: Agrupa y devuelve los nodos por niveles usando un recorrido de anchura (BFS).
 
-4. ## Ejercicio 4: Cálculo de la Profundidad de un Árbol Binario
+## 4. Ejercicio 4: Cálculo de la Profundidad de un Árbol Binario
 ## Descripción: Este ejercicio calcula la profundidad máxima de un árbol binario, es decir, la longitud del camino más largo desde la raíz hasta una hoja.
 
 Funcionamiento:
@@ -69,14 +69,14 @@ Clases principales:
 
 Depth: Calcula la profundidad máxima utilizando un algoritmo recursivo.
 
-Resumen del cálculo:
-Profundidad del nodo 1: 1 (hoja).
-Profundidad del nodo 3: 1 (hoja).
-Profundidad del nodo 2: 2 (nodo 2 + subárboles 1 y 3).
-Profundidad del nodo 8: 1 (hoja).
-Profundidad del nodo 7: 2 (nodo 7 + subárbol 8).
-Profundidad de la raíz (4): 3 (nodo 4 + subárboles 2 y 7).
-Por lo tanto, la profundidad del árbol es 3.
+-Resumen del cálculo:
+-Profundidad del nodo 1: 1 (hoja).
+-Profundidad del nodo 3: 1 (hoja).
+-Profundidad del nodo 2: 2 (nodo 2 + subárboles 1 y 3).
+-Profundidad del nodo 8: 1 (hoja).
+-Profundidad del nodo 7: 2 (nodo 7 + subárbol 8).
+-Profundidad de la raíz (4): 3 (nodo 4 + subárboles 2 y 7).
+-Por lo tanto, la profundidad del árbol es 3.
 
 ## Cómo Ejecutar el Código
 Para ejecutar este proyecto, simplemente ejecuta el main de la clase App, que llama a los métodos correspondientes de cada ejercicio.
