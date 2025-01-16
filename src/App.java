@@ -1,18 +1,21 @@
-import Main.Ejercicio_03_listevels.Listevels;
-import Main.Materia.Controllers.ArbolAVL;
-import Main.Materia.Controllers.ArbolBinario;
-import Main.Materia.Controllers.ArbolRecorrido;
+import Main.Ejercicio_01_insert.InsertBSTTest;
+import Main.Ejercicio_02_invert.InvertBinaryTree;
+import Main.Ejercicio_03_listLevels.ListLevels;
+import Main.Ejercicio_04_depth.Depth;
 import Main.Materia.Controllers.Models.Node;
 import java.util.List;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        runArboLBinario();
-        runEjercicio();
-        runArbolAVL();
+        //runArboLBinario();
+        runEjercicio1();
+        runEjercicio2();
+        runEjercicio3();
+        runEjercicio4();
+        //runArbolAVL();
     }
 
-    public static void runArboLBinario() {
+    /*public static void runArboLBinario() {
         ArbolBinario arbolBinario = new ArbolBinario();
 
         int[] valores = {40, 20, 60, 10, 30, 50, 70, 5, 15, 55};
@@ -38,20 +41,71 @@ public class App {
 
     }
 
-    private static void runEjercicio() {
+    private static void runArbolAVL() {
+        System.out.println("\nArbol avl");
+        int [] values = {10,9,8,20,15,24,21,23,50,25};   
+        ArbolAVL arbolavl = new ArbolAVL();
+            for(int num : values){
+                arbolavl.insert(num);
+            }
 
-        ArbolBinario arbolbinario = new ArbolBinario();
+        arbolavl.printTree();
+    }
+*/
+    private static void runEjercicio1() {
+
+        System.out.println("\nEjercicio 1");
+        InsertBSTTest insertBSTTest = new InsertBSTTest();
+
+        int[] valores = {5, 3, 7, 2, 4, 6, 8};
+        for (int valor : valores) {
+            insertBSTTest.insert(valor);  
+        }
+
+        insertBSTTest.printInsertionOrder();  // Imprimir los valores en el orden en que fueron insertados
+    
+        // Imprimir el árbol 
+        System.out.println("\nÁrbol Ejercicio:");
+        insertBSTTest.printTree();  // Imprimir el árbol por niveles
+    }
+
+
+    private static void runEjercicio2() {
+
+        System.out.println("\nEjercicio 2");
+        InvertBinaryTree invertBinaryTree = new InvertBinaryTree();
+
         int[] valores = {4, 2, 7, 1, 3, 6, 9};
         for (int valor : valores) {
-            arbolbinario.insert(valor);
+            invertBinaryTree.insert(valor);
+        }
+
+        // Imprimir árbol original
+        System.out.println("\nÁrbol original:");
+        invertBinaryTree.printTree();
+
+        // Invertir el árbol
+        invertBinaryTree.invert();
+
+        // Imprimir árbol invertido
+        System.out.println("\nÁrbol invertido:");
+        invertBinaryTree.printTree();
+    }
+
+    private static void runEjercicio3() {
+
+        System.out.println("\nEjercicio 3");
+        ListLevels levels = new ListLevels();
+        
+        int[] valores = {4, 2, 7, 1, 3, 6, 9};
+        for (int valor : valores) {
+            levels.insert(valor);
         }
 
         System.out.println("\nÁrbol Ejercicio:");
-        arbolbinario.printTree();
-
-
-        Listevels levels = new Listevels();
-        List<List<Node>> result = levels.Listevels(arbolbinario.getRoot());
+        levels.printTree();
+        
+        List<List<Node>> result = levels.ListLevels(levels.getRoot());
 
         System.out.println("\nNiveles del árbol:");
         for (int i = 0; i < result.size(); i++) {
@@ -64,14 +118,24 @@ public class App {
         }
     }
 
-    private static void runArbolAVL() {
-        System.out.println("\nArbol avl");
-        int [] values = {10,9,8,20,15,24,21,23,50,25};   
-        ArbolAVL arbolavl = new ArbolAVL();
-            for(int num : values){
-                arbolavl.insert(num);
-            }
+    private static void runEjercicio4() {
 
-        arbolavl.printTree();
+        System.out.println("\nEjercicio 4");
+        Depth depth = new Depth();
+
+        int[] valores = {4, 2, 7, 1, 3, 8};
+        for (int valor : valores) {
+            depth.insert(valor);
+        }
+
+        // Imprimir árbol
+        System.out.println("\nÁrbol binario:");
+        depth.printTree();
+
+        // Calcular y mostrar la profundidad máxima
+        System.out.println("\nProfundidad máxima del árbol: " + depth.maxDepth());
+        System.out.println("\n");
+
+        // error en el pdf la profundidad dice 4 pero en realidad es 3
     }
 }

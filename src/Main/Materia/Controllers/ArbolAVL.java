@@ -10,7 +10,8 @@ public class ArbolAVL {
         System.out.println("\nNodo a insertar: " + value);
         root = insert(root, value);
         // Imprimir el árbol después de cada inserción
-        printTree();
+        System.out.println("\nNodo insetado: " + value);
+        printTree();    
     }
 
     // Método recursivo para insertar un valor en el árbol
