@@ -69,14 +69,16 @@ Clases principales:
 
 Depth: Calcula la profundidad máxima utilizando un algoritmo recursivo.
 
--Resumen del cálculo:
--Profundidad del nodo 1: 1 (hoja).
--Profundidad del nodo 3: 1 (hoja).
--Profundidad del nodo 2: 2 (nodo 2 + subárboles 1 y 3).
--Profundidad del nodo 8: 1 (hoja).
--Profundidad del nodo 7: 2 (nodo 7 + subárbol 8).
--Profundidad de la raíz (4): 3 (nodo 4 + subárboles 2 y 7).
--Por lo tanto, la profundidad del árbol es 3.
+Resumen del cálculo:
+
+Profundidad del nodo 1: 1 (hoja).
+Profundidad del nodo 3: 1 (hoja).
+Profundidad del nodo 2: 2 (nodo 2 + subárboles 1 y 3).
+Profundidad del nodo 8: 1 (hoja).
+Profundidad del nodo 7: 2 (nodo 7 + subárbol 8).
+Profundidad de la raíz (4): 3 (nodo 4 + subárboles 2 y 7).
+
+Por lo tanto, la profundidad del árbol es 3.
 
 ## Cómo Ejecutar el Código
 Para ejecutar este proyecto, simplemente ejecuta el main de la clase App, que llama a los métodos correspondientes de cada ejercicio.
