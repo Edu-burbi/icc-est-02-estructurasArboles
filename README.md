@@ -28,44 +28,48 @@ Este proyecto implementa una serie de ejercicios relacionados con la manipulaci�
 ## 1. Ejercicio 1: Inserción en un Árbol Binario de Búsqueda
 ## Descripción: Este ejercicio muestra cómo insertar valores en un árbol binario de búsqueda (BST) y cómo imprimir la lista de valores y la estructura del árbol.
 
-Funcionamiento:
+- Funcionamiento:
 
 Se insertan los valores de un arreglo en un árbol binario de búsqueda, verificando que en el subárbol izquierdo estén los valores menores y en el subárbol derecho los valores mayores.
 El árbol se imprime por niveles para visualizar su estructura.
-Clases principales:
+
+- Clases principales:
 
 InsertBSTTest: Maneja la inserción y la impresión del árbol por niveles y el orden de inserción.
 
 ## 2. Ejercicio 2: Inversión de un Árbol Binario
 ## Descripción: Este ejercicio invierte un árbol binario, intercambiando los nodos de los subárboles izquierdo y derecho de cada nodo.
 
-Funcionamiento:
+- Funcionamiento:
 
 Se inserta una serie de valores en un árbol binario y luego se invierte la estructura del árbol.
 El árbol original y el árbol invertido se imprimen para visualizar el cambio.
-Clases principales:
+
+- Clases principales:
 
 InvertBinaryTree: Maneja la inserción de los valores y la inversión del árbol de manera recursiva.
 
 ## 3. Ejercicio 3: Listado de Niveles de un Árbol Binario
 ## Descripción: Este ejercicio lista todos los nodos del árbol binario, agrupados por niveles.
 
-Funcionamiento:
+- Funcionamiento:
 
 Después de insertar los valores en el árbol binario, se agrupan los nodos en listas correspondientes a cada nivel del árbol.
 Cada nivel del árbol se imprime con los nodos correspondientes.
-Clases principales:
+
+- Clases principales:
 
 ListLevels: Agrupa y devuelve los nodos por niveles usando un recorrido de anchura (BFS).
 
 ## 4. Ejercicio 4: Cálculo de la Profundidad de un Árbol Binario
 ## Descripción: Este ejercicio calcula la profundidad máxima de un árbol binario, es decir, la longitud del camino más largo desde la raíz hasta una hoja.
 
-Funcionamiento:
+- Funcionamiento:
 
 Se inserta una serie de valores en un árbol binario y se calcula la profundidad máxima.
 La profundidad máxima se imprime.
-Clases principales:
+
+- Clases principales:
 
 Depth: Calcula la profundidad máxima utilizando un algoritmo recursivo.
 
