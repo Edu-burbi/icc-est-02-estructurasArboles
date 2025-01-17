@@ -2,6 +2,7 @@ import Main.Ejercicio_01_insert.InsertBSTTest;
 import Main.Ejercicio_02_invert.InvertBinaryTree;
 import Main.Ejercicio_03_listLevels.ListLevels;
 import Main.Ejercicio_04_depth.Depth;
+import Main.Materia.Controllers.Graph;
 import Main.Materia.Controllers.Models.Node;
 import java.util.List;
 
@@ -12,6 +13,7 @@ public class App {
         runEjercicio2();
         runEjercicio3();
         runEjercicio4();
+        runGraph();
         //runArbolAVL();
     }
 
@@ -138,4 +140,25 @@ public class App {
 
         // error en el pdf la profundidad dice 4 pero en realidad es 3
     }
+
+    private static void runGraph() {
+
+        Graph grafo = new Graph();
+
+        // Agregar nodos al grafo
+        grafo.addNode(5); 
+        grafo.addNode(7); 
+        grafo.addNode(9); 
+        grafo.addNode(11); 
+        grafo.addNode(3); 
+
+        // Imprimir el grafo
+        System.out.println("Graph:");
+        grafo.printGraph();
+
+    }
 }
+    
+
+    
+
