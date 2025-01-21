@@ -4,15 +4,16 @@ import Main.Ejercicio_03_listLevels.ListLevels;
 import Main.Ejercicio_04_depth.Depth;
 import Main.Materia.Controllers.Graph;
 import Main.Materia.Controllers.Models.Node;
+import Main.Materia.Controllers.Models.NodeG;
 import java.util.List;
 
 public class App {
     public static void main(String[] args) throws Exception {
         //runArboLBinario();
-        runEjercicio1();
-        runEjercicio2();
-        runEjercicio3();
-        runEjercicio4();
+        //runEjercicio1();
+        //runEjercicio2();
+        //runEjercicio3();
+        //runEjercicio4();
         runGraph();
         //runArbolAVL();
     }
@@ -146,15 +147,58 @@ public class App {
         Graph grafo = new Graph();
 
         // Agregar nodos al grafo
-        grafo.addNode(5); 
-        grafo.addNode(7); 
-        grafo.addNode(9); 
-        grafo.addNode(11); 
-        grafo.addNode(3); 
+
+        NodeG nodo0 = grafo.addNode(0); 
+        NodeG nodo1 = grafo.addNode(1); 
+        NodeG nodo2 = grafo.addNode(2); 
+        NodeG nodo3 = grafo.addNode(3); 
+        NodeG nodo4 = grafo.addNode(4);
+        NodeG nodo5 = grafo.addNode(5);
+
+        grafo.addEdge(nodo0, nodo3);
+        grafo.addEdge(nodo0, nodo5);
+        grafo.addEdge(nodo3, nodo2);
+        grafo.addEdge(nodo3, nodo4);
+        grafo.addEdge(nodo4, nodo1);
+        grafo.addEdge(nodo2, nodo1);
+        grafo.addEdge(nodo1, nodo0);
+
 
         // Imprimir el grafo
-        System.out.println("Graph:");
+        System.out.println("\nGraph Con Edge:");
         grafo.printGraph();
+
+
+        Graph grafo2 = new Graph();
+
+
+        NodeG gnodo0 = grafo2.addNode(0); 
+        NodeG gnodo1 = grafo2.addNode(1); 
+        NodeG gnodo2 = grafo2.addNode(2); 
+        NodeG gnodo3 = grafo2.addNode(3); 
+        NodeG gnodo4 = grafo2.addNode(4);
+        NodeG gnodo5 = grafo2.addNode(5);
+
+        grafo2.addEdgeUni(gnodo0, gnodo3);
+        grafo2.addEdgeUni(gnodo0, gnodo5);
+        grafo2.addEdgeUni(gnodo3, gnodo2);
+        grafo2.addEdgeUni(gnodo3, gnodo4);
+        grafo2.addEdgeUni(gnodo4, gnodo1);
+        grafo2.addEdgeUni(gnodo2, gnodo1);
+        grafo2.addEdgeUni(gnodo1, gnodo0);
+
+
+        // Imprimir el grafo
+        System.out.println("\nGraph Con EdgeUni:");
+        grafo2.printGraph();
+
+        System.out.println("\nDireccional");
+        grafo2.getDFS(gnodo0);
+        grafo2.getBFS(gnodo0);
+
+        System.out.println("\nNo Direccional");
+        grafo.getDFS(nodo0);
+        grafo.getBFS(nodo0);
 
     }
 }
